@@ -84,7 +84,7 @@ public class AndroidBuilder : MonoBehaviour {
             return false;
         }
 
-        string ndkPath = EditorPrefs.GetString("AndroidNdkRootR16b", "");
+        string ndkPath = EditorPrefs.GetString("AndroidNdkRootR19", "");
         if (string.IsNullOrEmpty(ndkPath))
         {
             ndkPath = EditorPrefs.GetString("AndroidNdkRoot", "");
