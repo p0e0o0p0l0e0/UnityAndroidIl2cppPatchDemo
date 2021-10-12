@@ -264,7 +264,7 @@ import io.github.noodle1983.Boostrap;");
         }
 
         //must use the jdk in Unity
-        string gradlePath = jdkPath + "/../Tools/Gradle";
+        string gradlePath = EditorPrefs.GetString("GradlePath", "");
         string[] gradleMainJarFiles = Directory.GetFiles(gradlePath + "/lib", "gradle-launcher*.jar", SearchOption.TopDirectoryOnly);
         if (gradleMainJarFiles.Length == 0)
         {
