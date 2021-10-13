@@ -82,7 +82,7 @@ public class AndroidBuilder : MonoBehaviour {
             return false;
         }
 
-        string ndkPath = EditorPrefs.GetString("AndroidNdkRootR16b", "");
+        string ndkPath = EditorPrefs.GetString("AndroidNdkRootR19", "");
         if (string.IsNullOrEmpty(ndkPath))
         {
             ndkPath = EditorPrefs.GetString("AndroidNdkRoot", "");
@@ -250,7 +250,7 @@ import io.github.noodle1983.Boostrap;");
         }
 
         //must use the jdk in Unity
-        string gradlePath = jdkPath + "/../Tools/Gradle";
+        string gradlePath = EditorPrefs.GetString("GradlePath", "");
         string[] gradleMainJarFiles = Directory.GetFiles(gradlePath + "/lib", "gradle-launcher*.jar", SearchOption.TopDirectoryOnly);
         if (gradleMainJarFiles.Length == 0)
         {
